@@ -47,18 +47,20 @@ bool Term::is_like_term(Term& o)
   }
 }
 
-Term Term::add_term(Term& o)
+Term* Term::add_term(Term& o)
 {
   /*
    * Can only add like terms.
    */
-  if (this.is_like_term(o) == 1) {
+  if (this->is_like_term(o) == 1) {
     int new_coefficient = this->coefficient + o.coefficient;
     Term new_term(new_coefficient, this->var_ids, this->exponent);
-    return new_term;
+    Term *ptr_new_term = &new_term;
+    return ptr_new_term;
   } else {
     Term null_term(0, this->var_ids, this->exponent);
-    return null_term;
+    Term *ptr_null_term = &null_term;
+    return ptr_null_term;
   }
 }
 

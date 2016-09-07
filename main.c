@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string>
-#include "equations/linear_equation.h"
+#include "com/ianmann56/equations/linear_equation.h"
 
 int main(int argc, char** args)
 {
